@@ -3,6 +3,8 @@ import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 import Paper from '@mui/material/Paper'
 import AboutMe from './Content/About/AboutMe'
+import { useState } from 'react'
+import Navbar from './Content/Layout/Navbar'
 
 // Define styled Item component
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,11 +19,16 @@ const Item = styled(Paper)(({ theme }) => ({
 const MainContent = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md')) // Mobile detection
+  const [activeNavItem, setActiveNavItem] = useState('description')
 
   return (
     <Container fixed>
       {/* Display Navbar on mobile */}
-      {isMobile && <Typography>Navbar Traitemnt</Typography>}
+      <Navbar
+        activeNavItem={activeNavItem}
+        setActiveNavItem={setActiveNavItem}
+        isMobile={isMobile} // pass screen info
+      />
       <Box sx={{ flexGrow: 1 }} p={2} mt={2}>
         <Grid container spacing={3}>
           {/* Left Column */}
@@ -43,14 +50,15 @@ const MainContent = () => {
             }
           >
             {/* Navbar for larger screens */}
-            {!isMobile && (
-              <Item sx={{ mb: 2, bgcolor: '#2C3E50', color: 'white' }}>
-                <Typography>Navbar Traitement</Typography>
-              </Item>
-            )}
+            {/* {!isMobile && (
+              <Navbar
+                activeNavItem={activeNavItem}
+                setActiveNavItem={setActiveNavItem}
+              />
+            )} */}
 
             {/* Main Content */}
-            <Item sx={{ bgcolor: '#111', color: 'white' }}>
+            <Item sx={{ bgcolor: '#111', color: 'white', mt: 3 }}>
               <Typography>Containers Traitement</Typography>
             </Item>
           </Grid>
