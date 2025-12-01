@@ -12,8 +12,6 @@ import {
   List,
   Avatar,
   Box,
-  Menu,
-  MenuItem,
   Stack,
 } from '@mui/material'
 
@@ -21,6 +19,11 @@ import { Facebook, LinkedIn, Twitter } from '@mui/icons-material'
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball'
 import { IconButton } from '@mui/material'
 import MyInfo from './MyInfo'
+
+import WordIcon from '@mui/icons-material/Description'
+import PDFIcon from '@mui/icons-material/PictureAsPdf'
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
+import AboutButton from './AboutButton'
 
 const socialButtons = [
   { icon: <Facebook />, color: '#4267B2' },
@@ -154,6 +157,7 @@ const AboutMe = () => {
       </Box>
       {/* myInfo */}
       <MyInfo />
+      <AboutButton />
     </Box>
   )
 }

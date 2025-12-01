@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles'
 import Paper from '@mui/material/Paper'
+import AboutMe from './Content/About/AboutMe'
 
 // Define styled Item component
 const Item = styled(Paper)(({ theme }) => ({
@@ -26,7 +27,7 @@ const MainContent = () => {
           {/* Left Column */}
           <Grid item xs={12} md={4} mt={6}>
             <Item sx={{ bgcolor: '#2C3E50', color: 'white' }}>
-              <Typography>About Me</Typography>
+              <AboutMe />
             </Item>
           </Grid>
 
