@@ -28,6 +28,7 @@ const pages = [
 ]
 
 const Navbar = ({ activeNavItem, setActiveNavItem, isMobile }) => {
+  console.log(activeNavItem)
   const [anchorElNav, setAnchorElNav] = useState(null)
 
   const handleOpenNavMenu = (event) => {
