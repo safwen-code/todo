@@ -1,7 +1,8 @@
 import Description from './Content/Description/Description'
 import EduExp from './Content/EduExp/EduExp'
 import Skills from './Content/Skills/Skills'
-import Project from './Content/Project/Project'
+import Project from './Content/project/Project'
+
 const Containers = ({ activeNavItem }) => {
   console.log(activeNavItem)
   return (
