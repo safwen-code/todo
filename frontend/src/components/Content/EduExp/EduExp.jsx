@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Divider, Grid, Typography } from '@mui/material'
 import WorkStep from './WorkStep'
 import EduStep from './EduStep'
+import StageStep from './StageStep'
 const EduExp = () => {
   return (
     <>
@@ -23,6 +24,9 @@ const EduExp = () => {
         </Grid>
         <Grid item size={{ xs: 12, sm: 6 }}>
           <EduStep />
+        </Grid>
+        <Grid item size={{ xs: 12, sm: 6 }}>
+          <StageStep />
         </Grid>
       </Grid>
     </>
