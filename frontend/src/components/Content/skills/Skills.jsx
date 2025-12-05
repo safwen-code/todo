@@ -3,6 +3,7 @@ import { Divider, Typography } from '@mui/material'
 
 import CircularPrg from './CircularPrg'
 import BarPrg from './BarPrg'
+import SwipeableTextMobileStepper from './SwipeableTextMobileStepper'
 
 const Skills = () => {
   return (
@@ -13,6 +14,11 @@ const Skills = () => {
 
       {/* pogrsseve bar fixed */}
       <BarPrg />
+
+      <Divider sx={{ borderColor: '#D74B76' }} />
+
+      {/* swip progress */}
+      <SwipeableTextMobileStepper />
     </>
   )
 }
