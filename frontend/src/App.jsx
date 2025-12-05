@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Routes>
         <Route path="/" element={<MainContent />} />
       </Routes>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Divider, Typography } from '@mui/material'
 
 import CircularPrg from './CircularPrg'
+import BarPrg from './BarPrg'
 
 const Skills = () => {
   return (
@@ -11,7 +12,7 @@ const Skills = () => {
       <Divider sx={{ borderColor: '#D74B76' }} />
 
       {/* pogrsseve bar fixed */}
-      <Typography>progresseve bar</Typography>
+      <BarPrg />
     </>
   )
 }

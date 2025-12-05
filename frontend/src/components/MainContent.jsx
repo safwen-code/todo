@@ -30,40 +30,31 @@ const MainContent = () => {
         setActiveNavItem={setActiveNavItem}
         isMobile={isMobile} // pass screen info
       />
-      <Box sx={{ flexGrow: 1 }} p={2} mt={2}>
-        <Grid container spacing={2}>
-          {/* Left Column */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Item sx={{ bgcolor: '#2C3E50', color: 'white' }}>
-              <AboutMe />
-            </Item>
-          </Grid>
-
-          {/* Right Column */}
-          <Grid
-            item
-            size={{ xs: 12, md: 8 }}
-            sx={
-              {
-                //   height: activeNavItem === 'contact' ? '35rem' : 'auto',
-              }
-            }
-          >
-            {/* Navbar for larger screens */}
-            {/* {!isMobile && (
-              <Navbar
-                activeNavItem={activeNavItem}
-                setActiveNavItem={setActiveNavItem}
-              />
-            )} */}
-
-            {/* Main Content */}
-            <Item sx={{ bgcolor: '#111', color: 'white', mt: 3 }}>
-              <Containers activeNavItem={activeNavItem} />
-            </Item>
-          </Grid>
+      <Grid container spacing={2}>
+        {/* Left Column */}
+        <Grid size={{ xs: 12, md: 4 }}>
+          <Item sx={{ bgcolor: '#2C3E50', color: 'white' }}>
+            <AboutMe />
+          </Item>
         </Grid>
-      </Box>
+
+        {/* Right Column */}
+        <Grid
+          item
+          size={{ xs: 12, md: 8 }}
+          sx={
+            {
+              //   height: activeNavItem === 'contact' ? '35rem' : 'auto',
+            }
+          }
+        >
+          {/* Navbar for larger screens */}
+          {/* Main Content */}
+          <Item sx={{ bgcolor: '#111', color: 'white', mt: 3 }}>
+            <Containers activeNavItem={activeNavItem} />
+          </Item>
+        </Grid>
+      </Grid>
     </Container>
   )
 }
