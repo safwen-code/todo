@@ -32,25 +32,25 @@ export const profile = {
     whatido: [
       {
         title: 'UI UX',
-        img: <DesignServicesIcon />,
+        // img: <DesignServicesIcon />,
         description:
           'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
       },
       {
         title: 'App Developpement',
-        img: <CodeIcon />,
+        // img: <CodeIcon />,
         description:
           'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
       },
       {
         title: 'Conception et developpment',
-        img: <AssignmentIcon />,
+        // img: <AssignmentIcon />,
         description:
           'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
       },
       {
         title: 'App Mobile DEV',
-        img: <AppShortcutIcon />,
+        // img: <AppShortcutIcon />,
         description:
           'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
       },
