@@ -1,29 +1,57 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {
+  prfAbout,
+  prfdescription,
+  prfproject,
+  prfprofpath,
+  prfskills,
+} from '../thunk/profile'
 
 const initialState = {
-  loading: false,
+  about: {},
+  description: {},
+  project: '',
+  professionalpath: '',
+  skills: '',
+  loading: true,
   error: null,
 }
 
 const profileSlice = createSlice({
   name: 'profile',
   initialState,
-  reducers: {
-    // ===== Requests =====
-    startLoading(state) {
-      state.loading = true
-      state.error = null
-    },
-
-    // ===== Error =====
-    setError(state, action) {
-      state.loading = false
-      state.error = action.payload
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      //about
+      .addCase(prfAbout.pending, (state) => {
+        state.loading = true
+      })
+      .addCase(prfAbout.fulfilled, (state, action) => {
+        state.loading = false
+        state.about = action.payload
+      })
+      .addCase(prfAbout.rejected, (state, action) => {
+        state.loading = true
+        state.error = action.error.message
+      })
+      //description
+      .addCase(prfdescription.fulfilled, (state, action) => {
+        state.description = action.payload
+      })
+      //project
+      .addCase(prfproject.fulfilled, (state, action) => {
+        state.project = action.payload
+      })
+      //prof path
+      .addCase(prfprofpath.fulfilled, (state, action) => {
+        state.professionalpath = action.payload
+      })
+      //skills
+      .addCase(prfskills.fulfilled, (state, action) => {
+        state.skills = action.payload
+      })
   },
 })
 
-export const { startLoading, setError } = profileSlice.actions
-
-console.log(profileSlice)
 export const profileReducer = profileSlice.reducer
